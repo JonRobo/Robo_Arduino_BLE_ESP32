@@ -1,2 +1,4 @@
 # Robo_Arduino_BLE_ESP32
 A BLE Client library for the esp32 to interact with Robo Wunderkind
+This library allows for hardware hobbyists to integrate their ideas with the Robo Wunderkind product
+Users are encouraged to be creative in their project ideas and combine arduino sensors and electrical components into simple or complex projects with Robo Wunderkind!
