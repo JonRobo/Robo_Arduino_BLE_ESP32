@@ -1,0 +1,73 @@
+#######################################
+# Syntax Coloring Map Robo BLE
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Robo_BLE	KEYWORD1	Robo_BLE
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+init	                     KEYWORD2
+play_sound	                 KEYWORD2
+stop_all	                 KEYWORD2
+change_name	                 KEYWORD2
+get_battery_status	         KEYWORD2
+get_battery_level	         KEYWORD2
+get_battery_state	         KEYWORD2
+get_firmware_version         KEYWORD2
+RGB                          KEYWORD2
+RGB_OFF                      KEYWORD2
+RGB_RED                      KEYWORD2
+RGB_GREEN                    KEYWORD2  
+RGB_BLUE                     KEYWORD2
+RGB_PURPLE                   KEYWORD2
+RGB_YELLOW                   KEYWORD2 
+RGB_ORANGE                   KEYWORD2
+RGB_WHITE                    KEYWORD2
+RGB_Blink                    KEYWORD2
+RGB_Timed                    KEYWORD2
+RGB_Brightness               KEYWORD2
+motor_pwm                    KEYWORD2
+motor_cw                     KEYWORD2
+motor_ccw                    KEYWORD2
+motor_stop                   KEYWORD2
+set_drive                    KEYWORD2
+drive                        KEYWORD2
+stop                         KEYWORD2
+turn                         KEYWORD2
+drive_inf                    KEYWORD2
+turn_inf                     KEYWORD2
+scroll_text                  KEYWORD2
+matrix_image                 KEYWORD2 
+set_button_trigger           KEYWORD2
+get_button_state             KEYWORD2
+get_light_state              KEYWORD2
+set_light_trigger            KEYWORD2
+get_motion_state             KEYWORD2 
+set_motion_trigger           KEYWORD2
+get_distance_state           KEYWORD2
+set_distance_trigger         KEYWORD2
+get_sound_state              KEYWORD2
+set_sound_trigger            KEYWORD2
+get_linetracker_state_l      KEYWORD2
+get_linetracker_state_c      KEYWORD2
+get_linetracker_state_r      KEYWORD2
+get_linetracker_presence_l   KEYWORD2
+get_linetracker_presence_c   KEYWORD2
+get_linetracker_presence_r   KEYWORD2
+set_linetracker_trigger      KEYWORD2
+begin_linetracking           KEYWORD2
+get_acc_pickup_status        KEYWORD2
+get_acc_putdown_status       KEYWORD2
+get_acc_motion_status        KEYWORD2
+set_accelerometer_trigger    KEYWORD2
+monitor_id                   KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################
