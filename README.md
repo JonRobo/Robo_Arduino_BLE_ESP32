@@ -30,3 +30,5 @@ The BLE Client library has a bug that needs fixing, it has been updated on githu
 After this is done please close and reopen the Arduino IDE. Open the Connect example from this repository, change the Robo Name to the Robo you wish to connect to and have fun!
 <br />
 <br />
+
+![first_demo](https://user-images.githubusercontent.com/39582212/62228806-b39bc880-b3be-11e9-8760-8c6f35d711c2.png)
