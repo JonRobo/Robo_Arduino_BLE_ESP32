@@ -27,7 +27,7 @@ The BLE Client library has a bug that needs fixing, it has been updated on githu
 <br />
 <br />
 
-After this is done please close and reopen the Arduino IDE. Open the Connect example from this repository, change the Robo Name to the Robo you wish to connect to and have fun!
+After this is done please delete the extra BLE folder and then copy paste into the Arduino Library folder. Close and reopen the Arduino IDE. Open the Connect example from this repository, change the Robo Name to the Robo you wish to connect to and have fun!
 <br />
 <br />
 
