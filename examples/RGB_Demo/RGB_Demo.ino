@@ -16,6 +16,20 @@ void setup() {
   else Serial.println("Robo Connection Failure!");
 }
 
-void loop() {
+void RGB_Demo(){
+  RW.RGB(255,51,180,1);
   delay(2000);
+  RW.RGB_RED(1);
+  delay(2000);
+  RW.RGB_GREEN(1);
+  delay(2000);
+  RW.RGB_BLUE(1);
+  delay(2000);
+  RW.RGB_OFF(1);
+  delay(2000);
+}
+
+
+void loop() {
+  RGB_Demo();
 }

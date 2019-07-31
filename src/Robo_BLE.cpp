@@ -115,7 +115,7 @@ static void read_notifyCallback(BLERemoteCharacteristic* pBLERemoteCharacteristi
       case ACTION_OR_TRIGGER:
         NEW_ID = pData[2];
         ACTION_TRIGGER_ID[NEW_ID] = NEW_ID;
-        Serial.println(NEW_ID);
+        //Serial.println(NEW_ID);
         break;
     }
 }
@@ -426,6 +426,7 @@ void Robo_BLE::RGB_Timed(uint8_t R, uint8_t G, uint8_t B, uint16_t Time, uint8_t
     uint8_t len = 11;
     uint8_t command[len] = {0x0a,RGB_BLINK_TIME,0x08,id,module_num-1,R,G,B,TimeH,TimeL,0x00};
     Write_OK = 0;
+    ACTION_TRIGGER_ID[id] = 0;
     if(pRobo_Write_Characteristic->canWrite()){
       pRobo_Write_Characteristic->writeValue((uint8_t*)command, len, true);
     }
@@ -449,6 +450,7 @@ void Robo_BLE::RGB_Blink(uint8_t R, uint8_t G, uint8_t B, uint8_t blinks, uint16
     uint8_t len = 11;
     uint8_t command[len] = {0x0a,RGB_BLINK_TIME,0x08,id,module_num-1,R,G,B,periodH,periodL,blinks};
     Write_OK = 0;
+    ACTION_TRIGGER_ID[id] = 0;
     if(pRobo_Write_Characteristic->canWrite()){
       pRobo_Write_Characteristic->writeValue((uint8_t*)command, len, true);
     }
@@ -564,6 +566,7 @@ void Robo_BLE::set_drive(uint16_t vel, uint16_t distance, uint8_t dir,  uint8_t 
    uint8_t len = 12;
    uint8_t command[len] = {0x0b,MOTOR_DRIVE,0x09,id,0x03,dir,velH,velL,wdH,wdL,distanceH,distanceL};
    Write_OK = 0;
+   ACTION_TRIGGER_ID[id] = 0;
    if(pRobo_Write_Characteristic->canWrite()){
      pRobo_Write_Characteristic->writeValue((uint8_t*)command, len, true);
    }
@@ -663,6 +666,7 @@ void Robo_BLE::scroll_text(String text, uint8_t module_num, uint8_t orientation,
     command[7] = scroll_rate;
     command[8] = Length;
     Write_OK = 0;
+    ACTION_TRIGGER_ID[id] = 0;
     for(int i = 0; i < 20; i++){
       command[i+9] = text.charAt(i);
     }
@@ -811,6 +815,7 @@ void Robo_BLE::set_button_trigger(uint8_t condition, uint8_t module_num, uint8_t
   uint8_t command[len] = {0x05, BUTTON_TRIG, 0x03, id, module_num-1, condition};
   uint8_t response = 0;
   Write_OK = 0;
+  ACTION_TRIGGER_ID[id] = 0;
   if(pRobo_Write_Characteristic->canWrite()){
     pRobo_Write_Characteristic->writeValue((uint8_t*)command, len, true);
   }
@@ -873,6 +878,7 @@ void Robo_BLE::set_light_trigger(uint16_t value, uint8_t comparitor, uint8_t mod
     return;
   }
   Write_OK = 0;
+  ACTION_TRIGGER_ID[id] = 0;
   uint8_t value_l = value % 256;
   uint8_t value_h = value/256;
   uint8_t len = 8;
@@ -931,6 +937,7 @@ void Robo_BLE::set_motion_trigger(bool condition, uint8_t module_num, uint8_t id
     return;
   }
   Write_OK = 0;
+  ACTION_TRIGGER_ID[id] = 0;
   uint8_t len = 6;
   uint8_t command[len] = {0x05, MOTION_TRIG, 0x03, id, module_num-1, condition};
   if(pRobo_Write_Characteristic->canWrite()){
@@ -1028,6 +1035,7 @@ void Robo_BLE::set_distance_trigger(uint8_t value, uint8_t comparitor, uint8_t m
     return;
   }
   Write_OK = 0;
+  ACTION_TRIGGER_ID[id] = 0;
   uint8_t len = 7;
   uint8_t command[len] = {0x06, DISTANCE_TRIG, 0x04, id, module_num-1, comparitor, value};
   if(pRobo_Write_Characteristic->canWrite()){
@@ -1059,6 +1067,7 @@ void Robo_BLE::set_sound_trigger(uint8_t value, uint8_t comparitor, uint8_t modu
     return;
   }
   Write_OK = 0;
+  ACTION_TRIGGER_ID[id] = 0;
   uint8_t len = 7;
   uint8_t command[len] = {0x06, SOUND_TRIG, 0x04, id, module_num-1, comparitor, value};
   if(pRobo_Write_Characteristic->canWrite()){
@@ -1202,6 +1211,7 @@ void Robo_BLE::set_linetracker_trigger(bool condition, uint8_t module_num, uint8
     return;
   }
   Write_OK = 0;
+  ACTION_TRIGGER_ID[id] = 0;
   uint8_t trigger_condition = !condition;
   uint8_t len = 6;
   uint8_t command[len] = {0x05, LINETRACKER_TRIG, 0x03, id, module_num-1, trigger_condition};
@@ -1224,6 +1234,7 @@ void Robo_BLE::begin_linetracking(uint8_t module_num, uint8_t motors_bitmask, ui
     return;
   }
   Write_OK = 0;
+  ACTION_TRIGGER_ID[id] = 0;
   uint8_t len = 12;
   uint8_t command[len] = {0x0b, LINETRACKER_TRIG, 0x09, id, module_num-1, motors_bitmask, directions_bitmask, speed, 0x00, 0x00, 0x00, 0x00};
   if(pRobo_Write_Characteristic->canWrite()){
@@ -1324,6 +1335,7 @@ void Robo_BLE::set_accelerometer_trigger(uint8_t condition, uint8_t module_num, 
     return;
   }
   Write_OK = 0;
+  ACTION_TRIGGER_ID[id] = 0;
   uint8_t len = 6;
   uint8_t command[len] = {0x05, ACCELEROMETER_TRIG, 0x03, id, module_num-1, condition};
   if(pRobo_Write_Characteristic->canWrite()){

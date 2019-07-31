@@ -90,7 +90,6 @@ class Robo_BLE
     void scroll_text(String text, uint8_t module_num, uint8_t orientation, uint8_t repeats, uint8_t scroll_rate, uint8_t id);
     void matrix_image(uint8_t image[], uint8_t orientation, uint8_t module_num);
  
-    
     // Button
     void set_button_trigger(uint8_t condition, uint8_t module_num, uint8_t id);
     uint8_t get_button_state(uint8_t module_num);
