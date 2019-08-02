@@ -4,8 +4,6 @@ This library allows for hardware hobbyists to integrate their ideas with the Rob
 Users are encouraged to be creative in their project ideas and combine arduino sensors and electrical components into simple or complex projects with Robo Wunderkind!
 <br />
 <br />
-<br />
-<br />
 Special thanks to Neil Kolban for developing a fully functional BLE Client library for the ESP32
 https://github.com/nkolban/esp32-snippets
 
@@ -13,6 +11,8 @@ https://github.com/nkolban/esp32-snippets
 ## Setup
 
 Open the Arduino IDE and set the Board to Node32s and open the BLE_CLient Example
+If you have not installed the ESP32 Board to your Ardunio IDE, do so by following the instructions here
+https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/
 
 ![BLE_CLIENT](https://user-images.githubusercontent.com/39582212/62226987-69fdae80-b3bb-11e9-9113-9960b09ceeca.png)
 <br />
