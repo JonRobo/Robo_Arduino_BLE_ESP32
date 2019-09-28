@@ -10,17 +10,9 @@ https://github.com/nkolban/esp32-snippets
 
 ## Setup
 
-Open the Arduino IDE and set the Board to Node32s and open the BLE_CLient Example
+Open the Arduino IDE and set the Board to Node32s.
 If you have not installed the ESP32 Board to your Ardunio IDE, do so by following the instructions here
 https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/
-
-![BLE_CLIENT](https://user-images.githubusercontent.com/39582212/62226987-69fdae80-b3bb-11e9-9113-9960b09ceeca.png)
-<br />
-<br />
-From this example go to Sketch -> show sketc folder or Ctrl + k to open up the source directory of BLE
-<br />
-<br />
-
 
 After this is done copy paste Robo_Arduino_BLE_ESP32 into the Arduino Library folder. Close and reopen the Arduino IDE. Open the Connect example from this repository, change the Robo Name to the Robo you wish to connect to and have fun!
 <br />
